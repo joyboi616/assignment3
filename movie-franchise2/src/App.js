@@ -1,11 +1,13 @@
-/* import React from 'react'; */
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import About from "./components/about";
+import { Route, Routes } from "react-router-dom";
+
 import Navbar from './components/navbar';
-import Pricing from "./components/pricing";
 import Home from "./components/home";
 
-import { Route, Routes } from "react-router-dom";
+import MarvelMoviesList from './components/marvel/marvelMoviesList';
+import MarvelMoviesCreate from './components/marvel/marvelMoviesCreate';
+import MarvelMoviesEdit from './components/marvel/marvelMoviesEdit';
 
 function App() {
   return(
@@ -13,9 +15,13 @@ function App() {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/marvelList" element={<MarvelMoviesList />} />
+          <Route path="/marvelCreate" element={<MarvelMoviesCreate />} />
+          <Route path="/marvelEdit/:id" element={<MarvelMoviesEdit />} />
+
+          {/* <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} /> */}
         </Routes>
       </div>
     </>

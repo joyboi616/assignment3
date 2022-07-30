@@ -4,7 +4,7 @@ export default class MarvelMoviesList extends Component {
   render() {
     return (
       <div>
-        You are on the Marvel Movies List component!
+        <h1>You are on the Marvel Movies List component!</h1>
       </div>
     )
   }

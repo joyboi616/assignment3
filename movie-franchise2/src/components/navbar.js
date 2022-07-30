@@ -6,10 +6,11 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        Site Name
+        Movie Franchise Wikia
       </Link>
       <ul>
-        <CustomLink to="/pricing">Pricing</CustomLink>
+        <CustomLink to="/marvelList">Marvel List</CustomLink>
+        <CustomLink to="/marvelCreate">Create Marvel</CustomLink>
         <CustomLink to="/about">About</CustomLink>
       </ul>
     </nav>
